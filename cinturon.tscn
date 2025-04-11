@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://dux1h0jeg78s4"]
+
+[ext_resource type="Texture2D" uid="uid://drtwmt8o2frna" path="res://art/Objeto - Cinto.png" id="1_lfr3b"]
+[ext_resource type="Script" uid="uid://4qk3xs7cmy41" path="res://cinturon.gd" id="1_ll856"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ll856"]
+radius = 38.0
+height = 76.0
+
+[node name="Cinturon" type="Area2D" groups=["cinturones"]]
+script = ExtResource("1_ll856")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_lfr3b")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_ll856")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

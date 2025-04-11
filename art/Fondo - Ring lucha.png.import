@@ -1,0 +1,22 @@
+[remap]
+
+importer="2d_array_texture"
+type="CompressedTexture2DArray"
+uid="uid://cow6b4g1akl0r"
+valid=false
+
+[deps]
+
+source_file="res://art/Fondo - Ring lucha.png"
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+slices/horizontal=8
+slices/vertical=8

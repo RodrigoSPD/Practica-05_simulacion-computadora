@@ -1,0 +1,53 @@
+[gd_scene load_steps=7 format=3 uid="uid://b4jpqek5ul7cp"]
+
+[ext_resource type="Script" uid="uid://hx22a4hvlhkp" path="res://mob.gd" id="1_1qmh0"]
+[ext_resource type="Texture2D" uid="uid://c7we8abt8xyjj" path="res://art/Enemigo - taco mutante.png" id="2_p11y5"]
+[ext_resource type="Texture2D" uid="uid://cdgin4h6v811c" path="res://art/Enemigo - catrín.png" id="3_s5nov"]
+[ext_resource type="Texture2D" uid="uid://vskm2nn6qjt1" path="res://art/Enemigo - piñata mutante.png" id="4_b3mxk"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pcqmr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_p11y5")
+}],
+"loop": true,
+"name": &"fly",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_s5nov")
+}],
+"loop": true,
+"name": &"swim",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_b3mxk")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 3.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jbnni"]
+radius = 36.0
+height = 82.0
+
+[node name="Mob" type="RigidBody2D" groups=["mobs"]]
+collision_mask = 0
+gravity_scale = 0.0
+script = ExtResource("1_1qmh0")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.1, 0.1)
+sprite_frames = SubResource("SpriteFrames_pcqmr")
+animation = &"walk"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_jbnni")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]

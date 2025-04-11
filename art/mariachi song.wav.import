@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ckiakda58bcb4"
+path="res://.godot/imported/mariachi song.wav-c1cc9dae0acec6fe52b005ec4592eb8f.sample"
+
+[deps]
+
+source_file="res://art/mariachi song.wav"
+dest_files=["res://.godot/imported/mariachi song.wav-c1cc9dae0acec6fe52b005ec4592eb8f.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=2
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
